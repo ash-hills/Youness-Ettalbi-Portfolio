@@ -334,6 +334,26 @@ header {
 }
 
 
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 12px;
+  color: rgba(0,0,0,0.3);
+  border-top: 1px solid rgba(0,0,0,0.1);
+  letter-spacing: 0.1em;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -341,7 +361,7 @@ html {
 
 @media (max-width: 768px) {
 
-  /* NAV */
+ 
   header {
     flex-direction: column;
     align-items: center;
@@ -365,8 +385,6 @@ html {
     padding: 6px 12px;
     font-size: 14px;
   }
-
-  /* HERO */
   .hero {
     flex-direction: column;
     padding: 30px 20px;
@@ -374,31 +392,31 @@ html {
   }
 
   .hero-text {
-    align-items: center;   /* center button too */
+    align-items: center;  
   }
 
   .hero-text h1 {
     margin-right: 0;
-    font-size: 22px;       /* stops giant text */
+    font-size: 22px;       
   }
 
   .hero-text a {
-    margin-left: 0;        /* removes the 200px left margin */
+    margin-left: 0;        
     margin-right: 0;
   }
 
   .hero-image {
     max-width: 100%;
-    margin-right: 0;       /* removes 100px right margin */
+    margin-right: 0;      
   }
 
   .hero-image img {
     height: 300px;
   }
 
-  /* BIO */
+ 
   .bio {
-    margin: 0;             /* removes 150px side margins */
+    margin: 0;             
     padding: 30px 20px;
   }
 
@@ -417,7 +435,7 @@ html {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* FIXES TEXT WRAPPING ONE WORD PER LINE */
+ 
   .bio-section p,
   .bio-section h2 {
     word-break: normal;
@@ -426,16 +444,29 @@ html {
   }
 
   .expo-list li {
-    flex-direction: column;   /* stack year above title */
+    flex-direction: column;   
     gap: 4px;
   }
 
-  /* SECTION DIVIDER */
+ 
   .section-divider {
     margin: 30px 20px;
   }
 
-  /* GALLERY */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item {
+  width: 160px;
+  height: 220px;
+}
+
+.carousel-item.active {
+  width: 200px;
+  height: 280px;
+}
   .carousel-item {
     width: 180px;
     height: 260px;
